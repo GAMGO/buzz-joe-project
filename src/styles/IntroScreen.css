@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+}
+
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;           
+  object-position: center;     
+  image-rendering: pixelated; 
+  z-index: 1;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.dialogue {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 9%;
+  background: rgba(8, 10, 16, 0.9);
+  color: white;
+  padding: 35px;
+  font-size: 20px;
+  font-family: "Audiowide", sans-serif;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dialogue-name {
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: .6px;
+  margin-bottom: 5px;
+  color: #9ab6ff;
+  font-size: 18px;
+}
+
+.dialogue-text {
+  font-size: 20px;
+  font-family: "Audiowide", sans-serif;
+  white-space: pre-line;
+  letter-spacing: 0.5px;
+}
+
+.buzz_joe {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  width: 35%;
+  transform: translate(-75%, -38%) scale(1);
+  animation: zoomIn 1.5s ease forwards;
+  image-rendering: pixelated;
+  opacity: 1;
+  z-index: 20;
+}
+
+@keyframes zoomIn {
+  from { transform: translate(-75%, -38%) scale(1); }
+  to { transform: translate(-75%, -38%) scale(1.05); }
+}
+
+/* Blow 이미지 이동 */
+.blow {
+  position: fixed;
+  width: 10%;
+  animation: blowCover 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+  z-index: 30;
+  transform-origin: center center;
+  perspective: 1600px;
+}
+
+@keyframes blowCover {
+  0% {
+    left: 40%;
+    top: -10%;
+    opacity: 0;
+    transform: rotateY(0deg) rotateZ(-10deg) scale(0.1) translateZ(-1200px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: rotateY(10deg) rotateZ(-5deg) scale(3) translateZ(-200px);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: rotateY(0deg) rotateZ(0deg) scale(8) translateZ(600px); /* 카메라 앞까지 */
+  }
+
+  100% {
+    left: 40%;
+    top: -10%;
+    opacity: 0.7;
+    transform: rotateY(0deg) rotateZ(0deg) scale(15) translateZ(1000px);
+  }
+}
+
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.7;
+  animation: blackoutEffect 0.4s ease-in-out;
+  z-index: 50; 
+}
+
+@keyframes blackoutEffect {
+  0% { opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }  
+}
+
+.joe {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  width: 35%;
+  transform: translate(-75%, -38%) scale(1);
+  animation: zoomIn 1.5s ease forwards;
+  image-rendering: pixelated;
+  opacity: 1;
+  z-index: 20;
+}

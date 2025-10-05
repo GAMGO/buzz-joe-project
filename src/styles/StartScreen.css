@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root {
+  --bg: #0b0d12;   
+  --fg: #f2f5ff;   
+  --muted: #9aa3b2;
+  --accent: #78a6ff;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
+}
+
+.start-screen {
+  width: 100vw;
+  height: 100dvh;
+  background: url("/start.png") center/cover no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Audiowide", sans-serif;
+  box-sizing: border-box;
+}
+
+
+.start-btn {
+  display: block;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-family: "Audiowide", sans-serif;
+  color: #222;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  margin-bottom: 80px; 
+  z-index: 5;
+  box-shadow: 3px 4px 5px rgba(120, 166, 255, 0.9);
+}
+
+.start-btn:hover {
+  transform: scale(1.02);
+  background: #5f92f0;
+}
+
+.acrostic {
+  position: absolute;
+  left: 50px;
+  bottom: 60px;
+  text-align: left;
+  color: #fff;
+  font-family: "Audiowide", sans-serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  text-shadow: 6px 6px 8px rgba(120, 166, 255, 0.9);
+}
+
+.acrostic p {
+  height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
+.acrostic b {
+  font-size: 7rem;
+  font-family: "Audiowide", sans-serif;
+  color: #fff;
+}
+
+.logo {
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  width: 130px;
+  opacity: 1;
+}
+
+button{
+  width: 210px;
+  height: 50px;
+}
